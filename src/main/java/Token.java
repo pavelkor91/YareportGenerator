@@ -36,13 +36,13 @@ public class Token {
         }
 
         Scanner in = new Scanner(System.in);
-        token = in.next();
+        verificationCode = in.next();
         String tokenUrl = "https://oauth.yandex.ru/token";
 
         OAuthClient oAuthClient = new OAuthClient(new URLConnectionClient());
         OAuthClientRequest request = OAuthClientRequest
                 .tokenLocation(tokenUrl)
-                .setCode(token)
+                .setCode(verificationCode)
                 .setGrantType(GrantType.AUTHORIZATION_CODE)
                 .setRedirectURI(tokenUrl)
                 .setClientId(client_id)
@@ -51,6 +51,10 @@ public class Token {
         request.setHeader(OAuth.HeaderType.CONTENT_TYPE,"application/x-www-form-urlencoded");
         System.out.println(request.getBody());
         OAuthJSONAccessTokenResponse oAuthResponse = oAuthClient.accessToken(request, OAuthJSONAccessTokenResponse.class);
-        System.out.println(oAuthResponse.getAccessToken());
+        token = oAuthResponse.getAccessToken();
+        System.out.println(token);
+    }
+    public String getToken() {
+        return  token;
     }
 }
