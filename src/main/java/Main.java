@@ -13,5 +13,7 @@ public class Main {
         HttpRequest request = new HttpRequest(token.getToken());
         System.out.println(request.doRequest("https://api.webmaster.yandex.net/v3/user/", HttpRequest.HttpMethod.GET,null));
         System.out.println(request.doRequest("https://api-metrika.yandex.ru/management/v1/counters", HttpRequest.HttpMethod.GET,null));
+        System.out.println(request.doRequest("https://api-metrika.yandex.ru/stat/v1/data?preset=traffic&id=27460554", HttpRequest.HttpMethod.GET,null));
+        System.out.println(request.doRequest("https://api-metrika.yandex.ru/stat/v1/data?preset=traffic&ym:s:datePeriod<group>&group=Month&date1=31daysAgo&date2=today&id=27460554", HttpRequest.HttpMethod.GET,null));
     }
 }

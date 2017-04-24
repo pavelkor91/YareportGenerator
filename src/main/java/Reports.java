@@ -1,3 +1,5 @@
+import entity.Counter;
+
 public enum Reports {
     /**
 
@@ -9,7 +11,7 @@ public enum Reports {
 
      */
 
-    trafficSummary("/stat/traffic/summary"),
+    trafficSummary("/stat/v1/data"),
 
 
 
