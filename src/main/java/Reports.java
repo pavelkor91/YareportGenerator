@@ -5,73 +5,22 @@ public enum Reports {
 
      * Отчёт Трафик -> Посещаемость.
 
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/traffic-summary.xml">Справочник API</a>
+     * https://tech.yandex.ru/metrika/doc/api2/api_v1/presets/preset_traffic-docpage/
 
      */
 
-    trafficSummary("/stat/v1/data"),
-
-
+    trafficSummary("/stat/v1/data?present=traffic"),
 
     /**
 
      * Отчёт Трафик -> По времени суток.
 
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/traffic-hourly.xml">Справочник API</a>
-
      */
 
-    trafficHourly("/stat/traffic/hourly"),
-
+    trafficHourly("/stat/v1/data?present=hourly"),
 
 
     /**
-
-     * Отчёт Трафик -> Вовлечение.
-
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/traffic-deepness.xml">Справочник API</a>
-
-     */
-
-    trafficDeepness("/stat/traffic/deepness"),
-
-
-
-    /**
-
-     * Отчёт Трафик -> Нагрузка на сайт.
-
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/traffic-load.xml">Справочник API</a>
-
-     */
-
-    trafficLoad("/stat/traffic/load"),
-
-
-
-    /**
-
-     * Отчёт Источники -> Сводка.
-
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/sources-summary.xml">Справочник API</a>
-
-     */
-
-    sourcesSummary("/stat/sources/summary"),
-
-
-
-
 
     /**
 
@@ -79,11 +28,11 @@ public enum Reports {
 
      *
 
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/sources-sites.xml">Справочник API</a>
+     * https://tech.yandex.ru/metrika/doc/api2/api_v1/presets/preset_sources-docpage/
 
      */
 
-    sourcesSites("/stat/sources/sites"),
+    sourcesSites("/stat/v1/data?present=sources_sites"),
 
 
 
@@ -91,27 +40,24 @@ public enum Reports {
 
      * Отчёт Источники -> Поисковые системы.
 
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/sources-search-engines.xml">Справочник API</a>
-
      */
 
-    sourcesSearchEngines("/stat/sources/search_engines"),
+    sourcesSearchEngines("/stat/v1/data?present=search_engines"),
 
+    /**
 
+     * Отчёт Источники -> Сводка.
+
+     */
+    sourcesSummary("/stat/v1/data?present=sources_summary"),
 
     /**
 
      * Отчёт Источники -> Поисковые фразы.
 
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/sources-phrases.xml">Справочник API</a>
-
      */
 
-    sourcesPhrases("/stat/sources/phrases"),
+    sourcesPhrases("/stat/v1/data?present=sources_search_phrases"),
 
 
 
@@ -119,15 +65,10 @@ public enum Reports {
 
      * Отчёт Источники -> Рекламные системы.
 
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/sources-marketing.xml">Справочник API</a>
 
      */
 
-    sourcesMarketing("/stat/sources/marketing"),
-
-
+    sourcesMarketing("/stat/v1/data?present=adv_engine"),
 
     /**
 
@@ -135,11 +76,11 @@ public enum Reports {
 
      *
 
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/sources-direct-stats.xml">Справочник API</a>
+     * https://tech.yandex.ru/metrika/doc/api2/api_v1/presets/preset_direct-docpage/
 
      */
 
-    sourcesDirectSummary("/stat/sources/direct/summary"),
+    sourcesDirectSummary("/stat/v1/data?present=sources_direct_summary"),
 
 
 
@@ -147,56 +88,9 @@ public enum Reports {
 
      * Отчёт Источники -> Директ -> площадки.
 
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/sources-direct-platforms.xml">Справочник API</a>
-
      */
 
-    sourcesDirectPlatforms("/stat/sources/direct/platforms"),
-
-
-
-    /**
-
-     * Отчёт Источники -> Директ -> регионы.
-
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/sources-direct-regions.xml">Справочник API</a>
-
-     */
-
-    sourcesDirectRegions("/stat/sources/direct/regions"),
-
-
-
-    /**
-
-     * Отчёт Источники -> Метки.
-
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/sources-tags.xml">Справочник API</a>
-
-     */
-
-    sourcesTags("/stat/sources/tags"),
-
-
-
-    /**
-
-     * Отчёт Содержание -> Популярное.
-
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/content-popular.xml">Справочник API</a>
-
-     */
-
-    contentPopular("/stat/content/popular"),
-
+    sourcesDirectPlatforms("/stat/v1/data?present=sources_direct_platforms"),
 
 
     /**
@@ -205,11 +99,11 @@ public enum Reports {
 
      *
 
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/content-entrance.xml">Справочник API</a>
+     * https://tech.yandex.ru/metrika/doc/api2/api_v1/presets/preset_content-docpage/
 
      */
 
-    contentEntrance("/stat/content/entrance"),
+    contentEntrance("/stat/v1/data?present=content_entrance"),
 
 
 
@@ -217,13 +111,11 @@ public enum Reports {
 
      * Отчёт Содержание -> Страницы выхода.
 
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/content-exit.xml">Справочник API</a>
+      href="http://api.yandex.ru/metrika/doc/ref/stat/content-exit.xml">Справочник API</a>
 
      */
 
-    contentExit("/stat/content/exit"),
+    contentExit("/stat/v1/data?present=content_exit"),
 
 
 
@@ -231,13 +123,10 @@ public enum Reports {
 
      * Отчёт Содержание -> Заголовки.
 
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/content-titles.xml">Справочник API</a>
 
      */
 
-    contentTitles("/stat/content/titles"),
+    contentTitles("/stat/v1/data?present=titles"),
 
 
 
@@ -245,56 +134,10 @@ public enum Reports {
 
      * Отчёт Содержание -> Параметры URL.
 
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/content-url-param.xml">Справочник API</a>
 
      */
 
-    contentUrlParam("/stat/content/url_param"),
-
-
-
-    /**
-
-     * Отчёт по странам мира.
-
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/geo.xml">Справочник API</a>
-
-     */
-
-    geo("/stat/geo"),
-
-
-
-    /**
-
-     * Отчёт по полу и возрасту.
-
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/demography-age-gender.xml">Справочник API</a>
-
-     */
-
-    demographyAgeGender("/stat/demography/age_gender"),
-
-
-
-    /**
-
-     * Отчет по половозрастной структуре
-
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/demography-structure.xml">Справочник API</a>
-
-     */
-
-    demographyStructure("/stat/demography/structure"),
-
+    contentUrlParam("/stat/v1/data?present=url_params"),
 
 
     /**
@@ -303,11 +146,11 @@ public enum Reports {
 
      *
 
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/tech-browsers.xml">Справочник API</a>
+     * https://tech.yandex.ru/metrika/doc/api2/api_v1/presets/preset_tech-docpage/
 
      */
 
-    techBrowsers("/stat/tech/browsers"),
+    techBrowsers("/stat/v1/data?present=tech_browsers"),
 
 
 
@@ -315,13 +158,10 @@ public enum Reports {
 
      * Отчет Компьютеры -> Операционные системы
 
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/tech-os.xml">Справочник API</a>
 
      */
 
-    techOs("/stat/tech/os"),
+    techOs("/stat/v1/data?present=tech_platforms"),
 
 
 
@@ -329,115 +169,9 @@ public enum Reports {
 
      * Отчет Компьютеры -> Разрешения дисплеев
 
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/tech-display.xml">Справочник API</a>
-
      */
 
-    techDisplay("/stat/tech/display"),
-
-
-
-    /**
-
-     * Отчет Компьютеры -> Мобильные устройства
-
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/tech-mobile.xml">Справочник API</a>
-
-     */
-
-    techMobile("/stat/tech/mobile"),
-
-
-
-    /**
-
-     * Отчет Компьютеры -> Версии Flash
-
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/tech-flash.xml">Справочник API</a>
-
-     */
-
-    techFlash("/stat/tech/flash"),
-
-
-
-
-
-    /**
-
-     * Отчет Компьютеры -> Версии Silverlight
-
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/tech-silverlight.xml">Справочник API</a>
-
-     */
-
-    techSilverlight("/stat/tech/silverlight"),
-
-
-
-    /**
-
-     * Отчет Компьютеры -> Версии .NET
-
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/tech-dotnet.xml">Справочник API</a>
-
-     */
-
-    techDotnet("/stat/tech/dotnet"),
-
-
-
-
-
-    /**
-
-     * Отчет Компьютеры -> Наличие Java
-
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/tech-java.xml">Справочник API</a>
-
-     */
-
-    techJava("/stat/tech/java"),
-
-
-
-    /**
-
-     * Отчет Компьютеры -> Наличие cookies
-
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/tech-cookies.xml">Справочник API</a>
-
-     */
-
-    techCookies("/stat/tech/cookies"),
-
-
-
-    /**
-
-     * Отчет Компьютеры -> Наличие Javascript
-
-     *
-
-     * @see <a href="http://api.yandex.ru/metrika/doc/ref/stat/tech-javascript.xml">Справочник API</a>
-
-     */
-
-    techJavascript("/stat/tech/javascript");
+    techDisplay("/stat/v1/data?present=tech_display");
 
     public final String url;
 
