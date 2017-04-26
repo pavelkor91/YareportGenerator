@@ -12,12 +12,12 @@ import java.net.URI;
 import java.net.URISyntaxException;
 import java.util.Scanner;
 
-public class Token {
+public class Account {
     private String token;
     private final String client_id;
     private final String client_secret;
     private String verificationCode;
-    public Token(final String client_id, final String client_secret) {
+    public Account(final String client_id, final String client_secret) {
         this.client_id = client_id;
         this.client_secret = client_secret;
     }
